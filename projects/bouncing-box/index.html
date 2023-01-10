@@ -15,7 +15,7 @@
 			display: block;
 			position: absolute;
 			top: 100px;
-			left: 0px;  /* <--- Change me! */
+			left: 100px;  /* <--- Change me! */
 		}
 		.board{
 			height: 100vh;
@@ -63,7 +63,7 @@
 			
 			// TODO 2 - Variable declarations 
 			var positionX = 0;
-			var points = 0;
+			var points = 1;
 			var speed = 10;
 
 			
@@ -75,7 +75,7 @@
 			function update() {
 				/* Increase psoitionX by 10 */
 				positionX = 0 + 10;
-				meboxto(positionX);
+				meBoxTo(positionX);
 
 			};
 
@@ -88,7 +88,8 @@
 				positionX = 0;
 				positionX = positionX + 1;
 				changeBoxText(points);
-				speed(10 + 3)
+				speed = speed + 3;
+				points = points + 1;
 
 
 			};

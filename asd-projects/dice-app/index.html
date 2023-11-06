@@ -4,8 +4,8 @@
     <style>
         #die {
             height: 100px;
-            width: 100px;
-            background-color: lightgray; /* feel free to change this*/
+            width: 90px;
+            background-color: rgb(172, 172, 172); /* feel free to change this*/
             position: relative
         }
     </style>
@@ -19,49 +19,60 @@
     
 </body>
 <script>
-$('<div>')
+
+    function makeDot(x, y){
+        $('<div>')
     .css("height", 15)
     .css("width", 15)
     .css("background-color", "black")
     .css("position", "absolute")
-    .css('top', 50)
-    .css('left', 50)
+    .css('top', x + -5)
+    .css('left', y + -10)
     .appendTo("#die");
-    function makeDot(-10);
-    function rollDie = $('#die').emptu();{
+    }
+    function rollDie (dieID){
+        $('#die').empty();
+
     var randomNum = Math.ceil(Math.random() * 6)
     if (randomNum === 1) {
-    makeDot(50, 50, dieID); // middle middle
+    makeDot(50, 50, die); // middle middle
 }
 else if (randomNum === 2) {
-    makeDot(25, 25, dieID); // top left
-    makeDot(75, 75, dieID); // bottom right
+    makeDot(25, 25, die); // top left
+    makeDot(75, 75, die); // bottom right
 }
 else if (randomNum === 3) {
-    makeDot(25, 25, dieID); // top left
-    makeDot(75, 75, dieID); // bottom right
-    makeDot(50, 50, dieID); // middle middle
+    makeDot(25, 25, die); // top left
+    makeDot(75, 75, die); // bottom right
+    makeDot(50, 50, die); // middle middle
 }
 else if (randomNum === 4) {
-    makeDot(75, 75, dieID); // bottom right
-    makeDot(25, 25, dieID); // top left
-    makeDot(25, 75, dieID); // bottom left
-    makeDot(75, 25, dieID); // top right
+    makeDot(75, 75, die); // bottom right
+    makeDot(25, 25, die); // top left
+    makeDot(25, 75, die); // bottom left
+    makeDot(75, 25, die); // top right
 }
 else if (randomNum === 5) {
-    makeDot(50, 50, dieID); // middle middle
-    makeDot(75, 75, dieID); // bottom right
-    makeDot(25, 25, dieID); // top left
-    makeDot(25, 75, dieID); // bottom left
-    makeDot(75, 25, dieID); // top right
+    makeDot(50, 50, die); // middle middle
+    makeDot(75, 75, die); // bottom right
+    makeDot(25, 25, die); // top left
+    makeDot(25, 75, die); // bottom left
+    makeDot(75, 25, die); // top right
+}
+else if (randomNum === 6) {
+    makeDot(50, 50, die);
+    makeDot(75, 75, die);
+    makeDot(25, 25, die);
+    makeDot(25, 75, die);
+    makeDot(75, 25, die);
 }
     }
     // Register an event handler function to be called in response to an "event"
-$("element").on("eventType", handlerFn);
+$("#die").on("click", handlerFn);
 
 // Event handler function
 function handlerFn() {
-    function rollDie()
+     rollDie()
 }
     </script>
 </html>

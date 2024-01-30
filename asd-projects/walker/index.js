@@ -6,22 +6,17 @@ function runProgram(){
   ////////////////////////////////////////////////////////////////////////////////
   //////////////////////////// SETUP /////////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
-var KEY = {
-  "LEFT": 37,
-}
-var KEY = {
-  "RIGHT": 39,
-}
-var KEY = {
-  "DOWN": 40,
-}
-var KEY = {
-  "UP": 38,
-}
+
   // Constant Variables
   var FRAME_RATE = 60;
   var FRAMES_PER_SECOND_INTERVAL = 1000 / FRAME_RATE;
-  
+  var KEY = {
+    "LEFT": 37,
+    "RIGHT": 39,
+    "DOWN": 40,
+    "UP": 38
+  }
+  }
   // Game Item Objects
   var positionX = 0; 
   var speedX = 0;
@@ -41,8 +36,8 @@ var KEY = {
   by calling this function and executing the code inside.
   */
   function newFrame() {
-    repositionGameItem;
-    redrawGameItem;
+    repositionGameItem();
+    redrawGameItem();
 
   }
   
@@ -51,15 +46,19 @@ var KEY = {
   */
   function handleKeyDown(event) {
     if (event.which === KEY.LEFT){
+      Walker.speedX = 5;
       console.log("left pressed");
     }
     if (event.which === KEY.RIGHT){
+      walker.speedX = 5;
       console.log("right pressed");
     }
     if (event.which === KEY.DOWN){
+      walker.speedY = -5;
       console.log("down pressed");
     }
     if (event.which === KEY.UP){
+      walker.speedY = -5;
       console.log("up pressed");
     }
   }
@@ -77,12 +76,12 @@ var KEY = {
     $(document).off();
   }
   function repositionGameItem(){
-positionX += speedX;
-positionY += speedY;
+walker.positionX += walker.speedX;
+walker.positionY += walker.speedY;
   }
 function redrawGameItem(){
 $("#box").css("left", positionX);
-$("#box").css("left", psoitionY);
+$("#box").css("top", psoitionY);
 }
 
-}
+

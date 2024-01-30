@@ -10,7 +10,7 @@ function runProgram(){
   // Constant Variables
   var FRAME_RATE = 60;
   var FRAMES_PER_SECOND_INTERVAL = 1000 / FRAME_RATE;
-  var KEY = {
+  const KEY = {
     "LEFT": 37,
     "RIGHT": 39,
     "DOWN": 40,
@@ -46,20 +46,20 @@ function runProgram(){
   */
   function handleKeyDown(event) {
     if (event.which === KEY.LEFT){
-      Walker.speedX = 5;
-      console.log("left pressed");
+     console.log("left pressed");
+      walker.speedX = 5;
     }
     if (event.which === KEY.RIGHT){
-      walker.speedX = 5;
       console.log("right pressed");
+      walker.speedX = 5;
     }
     if (event.which === KEY.DOWN){
+     console.log("down pressed");
       walker.speedY = -5;
-      console.log("down pressed");
     }
     if (event.which === KEY.UP){
+     console.log("up pressed");
       walker.speedY = -5;
-      console.log("up pressed");
     }
   }
 

@@ -16,7 +16,7 @@ function runProgram(){
     "DOWN": 40,
     "UP": 38
   }
-  }
+
   // Game Item Objects
   var positionX = 0; 
   var speedX = 0;
@@ -25,7 +25,7 @@ function runProgram(){
 
   // one-time setup
   var interval = setInterval(newFrame, FRAMES_PER_SECOND_INTERVAL);   // execute newFrame every 0.0166 seconds (60 Frames per second)
-  $(document).on('KeyDown', handleKeyDown);                           // change 'eventType' to the type of event you want to handle
+  $(document).on('keydown', handleKeyDown);                           // change 'eventType' to the type of event you want to handle
 
   ////////////////////////////////////////////////////////////////////////////////
   ///////////////////////// CORE LOGIC ///////////////////////////////////////////
@@ -81,7 +81,11 @@ walker.positionY += walker.speedY;
   }
 function redrawGameItem(){
 $("#box").css("left", positionX);
-$("#box").css("top", psoitionY);
+$("#box").css("up", positionY);
+$("#box").css("down", positionY);
+$("#box").css("right", positionX);
+}
+
 }
 
 

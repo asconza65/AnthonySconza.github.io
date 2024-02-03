@@ -1,22 +1,32 @@
 
 body {
-  background-color: darkgreen;
+  background-color: rgb(1, 24, 1);
 }
 
 #board {
-  width: 440px;
-  height: 440px;
+  width: 500px;
+  height: 500px;
   border: 1px solid white;
-  background-color: black;
+  background-color: rgb(201, 197, 197);
   position: relative;
 }
 
 #walker {
-  background-color: teal;
-  width: 50px;
-  height: 50px;
+  background-color: rgb(26, 172, 13);
+  width: 70px;
+  height: 70px;
   position: absolute;
   border-radius: 50px;
 /*   left: 100px; */  /* Uncomment if you want to set a "starting" position */
 /*   top: 100px;  */  /* Uncomment if you want to set a "starting" position */
+}
+
+#runner {
+  background-color: red;
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  border-radius: 50px;
+  left: 700px;   
+  top: 700px;   
 }

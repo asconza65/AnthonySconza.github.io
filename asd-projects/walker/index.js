@@ -80,10 +80,10 @@ walker.positionX += walker.speedX;
 walker.positionY += walker.speedY;
   }
 function redrawGameItem(){
-$("#box").css("left", positionX);
-$("#box").css("up", positionY);
-$("#box").css("down", positionY);
-$("#box").css("right", positionX);
+$("#box").css("left", walker.positionX);
+$("#box").css("up", walker.positionY);
+$("#box").css("down", walker.positionY);
+$("#box").css("right", walker.positionX);
 }
 
 }
